@@ -1,4 +1,6 @@
 import { defineConfig, type OutputConfig, type EnvironmentConfig } from '@rsbuild/core'
+import { pluginBabel } from '@rsbuild/plugin-babel';
+import { pluginSolid } from '@rsbuild/plugin-solid';
 
 const getElectronOutput = (type: "main" | "preload") => {
     const config: OutputConfig = {
@@ -46,7 +48,10 @@ export default defineConfig({
         "electron-preload": getElectronInput('preload'),
         "web": {
             plugins: [
-                
+                pluginBabel({
+                    include: /\.(?:jsx|tsx)$/,
+                }),
+                pluginSolid(),
             ],
             source: {
                 entry: {
@@ -56,7 +61,7 @@ export default defineConfig({
             output: {
                 assetPrefix: "../",
                 distPath: {
-                    html: '/',
+                    html: './',
                     css: 'static',
                     font: 'static',
                     image: 'static',
@@ -73,7 +78,7 @@ export default defineConfig({
                 }
             },
             performance: {
-                
+
             }
         },
     },
