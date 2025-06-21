@@ -1,6 +1,6 @@
 {
   "name": "electron-updater-test",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "",
   "main": "./out-electron/main/main.js",
   "scripts": {
