@@ -5,17 +5,25 @@
   "main": "./dist-electron/main/main.js",
   "scripts": {
     "build": "rsbuild build",
-    "dev:renderer": "rsbuild dev"
+    "dev": "parallel",
+    "dev:renderer": "rsbuild dev",
+    "dev:main": "electron ./dist-electron/main/main.js",
+    "build:win": "pnpm run build && electron-builder --win"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "packageManager": "pnpm@10.12.1",
   "devDependencies": {
+    "@electron-toolkit/preload": "^3.0.2",
     "@rsbuild/core": "1.4.0-beta.5",
     "@rsbuild/plugin-babel": "^1.0.5",
     "@rsbuild/plugin-solid": "^1.0.5",
+    "@types/node": "^24.0.3",
     "@vue/tsconfig": "^0.7.0",
+    "electron": "^36.5.0",
+    "electron-builder": "^26.0.12",
+    "electron-updater": "^6.6.2",
     "parallel-wait-run": "^0.2.2",
     "solid-js": "^1.9.7"
   }

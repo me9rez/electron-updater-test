@@ -21,7 +21,7 @@ export default defineConfig({
       name: `electron`,
       command: `pnpm dev:main`,
       wait: async () => {
-        await sleep(3000)
+        await sleep(2000)
         return true
       },
     },

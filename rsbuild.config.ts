@@ -59,7 +59,7 @@ export default defineConfig({
                 }
             },
             output: {
-                assetPrefix: "../",
+                assetPrefix: "./",
                 distPath: {
                     html: './',
                     css: 'static',
@@ -69,7 +69,7 @@ export default defineConfig({
                 }
             },
             html: {
-                // template: "./pages/template.html"
+                template: "./index.html"
             },
             tools: {
                 rspack: {
