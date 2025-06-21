@@ -25,6 +25,8 @@ win:
   executableName: electron-updater-test
   artifactName: ${productName}-${version}-${arch}-setup.${ext}
   verifyUpdateCodeSignature: false
+  target:
+    - target: nsis
 nsis:
   artifactName: ${productName}-${version}-${arch}-setup.${ext}
   shortcutName: ${productName}
@@ -33,8 +35,9 @@ nsis:
   allowToChangeInstallationDirectory: true
   oneClick: false
 npmRebuild: false
-publish:
-  provider: generic
-  protocol: https
 electronDownload:
   mirror: https://npmmirror.com/mirrors/electron/
+publish:
+  provider: github
+  owner: 'me9rez'
+  repo: 'electron-updater-test'
