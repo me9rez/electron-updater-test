@@ -1,14 +1,15 @@
 {
   "name": "electron-updater-test",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
-  "main": "./dist-electron/main/main.js",
+  "main": "./out-electron/main/main.js",
   "scripts": {
     "build": "rsbuild build",
     "dev": "parallel",
     "dev:renderer": "rsbuild dev",
-    "dev:main": "electron ./dist-electron/main/main.js",
-    "build:win": "pnpm run build && electron-builder --win"
+    "dev:main": "electron ./out-electron/main/main.js",
+    "build:win": "pnpm run build && electron-builder --win",
+    "release": "release-it"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +26,7 @@
     "electron-builder": "^26.0.12",
     "electron-updater": "^6.6.2",
     "parallel-wait-run": "^0.2.2",
+    "release-it": "^19.0.3",
     "solid-js": "^1.9.7"
   }
 }

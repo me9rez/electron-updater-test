@@ -1,9 +1,18 @@
-appId: com.electron.app
+appId: com.me9rez.ElectronUpdaterTest
 productName: electron-updater-test
+electronLanguages:
+  - zh-CN
+  - zh-TW
+  - en-US
+  - ja # macOS/linux/win
+  - ru # macOS/linux/win
+  - zh_CN # for macOS
+  - zh_TW # for macOS
+  - en # for macOS
 directories:
   buildResources: build
-  output: target
 files:
+  - '**/*'
   - '!**/.vscode/*'
   - '!src/*'
   - '!electron/*'
@@ -14,11 +23,15 @@ asarUnpack:
   - resources/**
 win:
   executableName: electron-updater-test
+  artifactName: ${productName}-${version}-${arch}-setup.${ext}
+  verifyUpdateCodeSignature: false
 nsis:
-  artifactName: ${name}-${version}-setup.${ext}
+  artifactName: ${productName}-${version}-${arch}-setup.${ext}
   shortcutName: ${productName}
   uninstallDisplayName: ${productName}
   createDesktopShortcut: always
+  allowToChangeInstallationDirectory: true
+  oneClick: false
 npmRebuild: false
 publish:
   provider: generic

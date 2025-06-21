@@ -8,7 +8,13 @@ const createWindow = () => {
         autoHideMenuBar: true,
     })
 
-    win.loadFile(indexHtmlPath)
+    if (app.isPackaged) {
+        win.loadFile(indexHtmlPath)
+    }else{
+        win.loadURL("http://localhost:3000/index.html")
+        win.webContents.openDevTools()
+    }
+
 }
 
 app.whenReady().then(() => {
