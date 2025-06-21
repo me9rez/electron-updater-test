@@ -4,7 +4,8 @@ export default {
   git: {
     commit: true,
     tag: true,
-    push: true
+    push: true,
+    tagName:"v${version}"
   },
   github: {
     release: false
