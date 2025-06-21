@@ -14,7 +14,6 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "packageManager": "pnpm@10.12.1",
   "devDependencies": {
     "@electron-toolkit/preload": "^3.0.2",
     "@rsbuild/core": "1.4.0-beta.5",
