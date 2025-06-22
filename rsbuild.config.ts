@@ -5,7 +5,7 @@ import { pluginSolid } from '@rsbuild/plugin-solid';
 const getElectronOutput = (type: "main" | "preload") => {
     const config: OutputConfig = {
         distPath: {
-            root: `out-electron/${type}`,
+            root: `out/${type}`,
             js: './'
         },
         filenameHash: false,
@@ -61,7 +61,7 @@ export default defineConfig({
             output: {
                 assetPrefix: "./",
                 distPath: {
-                    root: "out",
+                    root: "out/renderer",
                     html: './',
                     css: 'static',
                     font: 'static',

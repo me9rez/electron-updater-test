@@ -1,5 +1,5 @@
 import { app, BrowserWindow } from 'electron';
-import { distElectronPath, indexHtmlPath } from './util'
+import { indexHtmlPath } from './util'
 
 
 const createWindow = () => {

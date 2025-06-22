@@ -2,12 +2,12 @@
   "name": "electron-updater-test",
   "version": "0.0.8",
   "description": "",
-  "main": "./out-electron/main/main.js",
+  "main": "./out/main/main.js",
   "scripts": {
     "build": "rsbuild build",
     "dev": "parallel",
     "dev:renderer": "rsbuild dev",
-    "dev:main": "electron ./out-electron/main/main.js",
+    "dev:main": "electron ./out/main/main.js",
     "build:win": "pnpm run build && electron-builder --win",
     "release": "release-it"
   },
