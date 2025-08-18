@@ -1,11 +1,9 @@
-appId: com.me9rez.ElectronUpdaterTest
+appId: com.me9rez.electronupdatertest
 productName: electron-updater-test
 electronLanguages:
   - zh-CN
   - zh-TW
   - en-US
-  - ja # macOS/linux/win
-  - ru # macOS/linux/win
   - zh_CN # for macOS
   - zh_TW # for macOS
   - en # for macOS

@@ -1,5 +1,6 @@
 import { app, BrowserWindow } from 'electron';
-import { indexHtmlPath } from './util'
+import { indexHtmlPath } from './util';
+import { setupAutoUpdater } from './updater';
 
 
 const createWindow = () => {
@@ -19,6 +20,9 @@ const createWindow = () => {
 }
 
 app.whenReady().then(() => {
+    // 初始化自动更新
+    setupAutoUpdater();
+    
     createWindow()
 
     app.on('activate', () => {
