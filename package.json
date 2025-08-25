@@ -16,11 +16,11 @@
   "license": "MIT",
   "devDependencies": {
     "@electron-toolkit/preload": "^3.0.2",
-    "@rsbuild/core": "1.4.15",
+    "@rsbuild/core": "1.4.16",
     "@rsbuild/plugin-babel": "^1.0.6",
     "@rsbuild/plugin-solid": "^1.0.6",
     "@types/node": "^24.3.0",
-    "electron": "^37.3.0",
+    "electron": "^37.3.1",
     "electron-builder": "^26.0.12",
     "electron-updater": "^6.6.2",
     "parallel-wait-run": "^0.2.2",
