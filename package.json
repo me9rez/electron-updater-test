@@ -16,7 +16,7 @@
   "license": "MIT",
   "devDependencies": {
     "@electron-toolkit/preload": "^3.0.2",
-    "@rsbuild/core": "1.4.16",
+    "@rsbuild/core": "1.5.0",
     "@rsbuild/plugin-babel": "^1.0.6",
     "@rsbuild/plugin-solid": "^1.0.6",
     "@types/node": "^24.3.0",
