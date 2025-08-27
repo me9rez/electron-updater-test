@@ -11,7 +11,12 @@ const getElectronOutput = (type: "main" | "preload") => {
         filenameHash: false,
         cleanDistPath: true,
         sourceMap: false,
-        minify: false
+        minify: false,
+        target: "node",
+        module: type === 'main',
+        filename: {
+            // js: type === 'main' ? "[name].js" : "[name].mjs",
+        }
     }
     return config
 }

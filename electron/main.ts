@@ -1,5 +1,5 @@
 import { app, BrowserWindow } from 'electron';
-import { indexHtmlPath } from './util';
+import { indexHtmlPath, preloadPath } from './util';
 import { setupAutoUpdater } from './updater';
 
 
@@ -8,12 +8,15 @@ const createWindow = () => {
         width: 800,
         height: 600,
         autoHideMenuBar: true,
+        webPreferences: {
+            preload: preloadPath
+        }
     })
 
     if (app.isPackaged) {
         win.loadFile(indexHtmlPath)
-    }else{
-        win.loadURL("http://localhost:3000/index.html")
+    } else {
+        win.loadURL("http://localhost:3001/index.html")
         win.webContents.openDevTools()
     }
 
@@ -21,8 +24,8 @@ const createWindow = () => {
 
 app.whenReady().then(() => {
     // 初始化自动更新
-    setupAutoUpdater();
-    
+    // setupAutoUpdater();
+
     createWindow()
 
     app.on('activate', () => {

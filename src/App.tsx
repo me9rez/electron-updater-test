@@ -5,6 +5,7 @@ const ipcRenderer = window.electron.ipcRenderer
 const App = () => {
 
   onMount(() => {
+    
     ipcRenderer.on('update-available', (event, info) => {
       console.log('update-available', info)
     })

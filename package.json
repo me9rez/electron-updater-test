@@ -2,6 +2,7 @@
   "name": "electron-updater-test",
   "version": "0.0.8",
   "description": "",
+  "type": "module",
   "main": "./out/main/main.js",
   "scripts": {
     "build": "rsbuild build",
@@ -16,7 +17,7 @@
   "license": "MIT",
   "devDependencies": {
     "@electron-toolkit/preload": "^3.0.2",
-    "@rsbuild/core": "1.5.0",
+    "@rsbuild/core": "^1.5.0",
     "@rsbuild/plugin-babel": "^1.0.6",
     "@rsbuild/plugin-solid": "^1.0.6",
     "@types/node": "^24.3.0",
@@ -25,6 +26,7 @@
     "electron-updater": "^6.6.2",
     "parallel-wait-run": "^0.2.2",
     "release-it": "^19.0.4",
-    "solid-js": "^1.9.9"
+    "solid-js": "^1.9.9",
+    "typescript": "^5.9.2"
   }
 }
