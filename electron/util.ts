@@ -1,6 +1,6 @@
 import path from "node:path";
 
-export const rootPath = path.join(__dirname, "../../");
+export const rootPath = path.join(import.meta.dirname, "../../");
 
 export const distPath = path.join(rootPath, "out");
 

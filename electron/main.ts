@@ -16,7 +16,7 @@ const createWindow = () => {
     if (app.isPackaged) {
         win.loadFile(indexHtmlPath)
     } else {
-        win.loadURL("http://localhost:3001/index.html")
+        win.loadURL("http://localhost:3000/index.html")
         win.webContents.openDevTools()
     }
 

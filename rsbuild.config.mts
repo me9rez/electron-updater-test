@@ -13,15 +13,12 @@ const getElectronOutput = (type: "main" | "preload") => {
         sourceMap: false,
         minify: false,
         target: "node",
-        module: type === 'main',
-        filename: {
-            // js: type === 'main' ? "[name].js" : "[name].mjs",
-        }
+        module: false,
     }
     return config
 }
 
-const getElectronInput = (type: "main" | "preload") => {
+const getElectronConfig = (type: "main" | "preload") => {
     const config: EnvironmentConfig = {
         source: {
             entry: {
@@ -49,8 +46,8 @@ const getElectronInput = (type: "main" | "preload") => {
 
 export default defineConfig({
     environments: {
-        "electron-main": getElectronInput('main'),
-        "electron-preload": getElectronInput('preload'),
+        "electron-main": getElectronConfig('main'),
+        "electron-preload": getElectronConfig('preload'),
         "web": {
             plugins: [
                 pluginBabel({
@@ -83,9 +80,6 @@ export default defineConfig({
                     dependencies: ["electron-main", "electron-preload"]
                 }
             },
-            performance: {
-
-            }
         },
     },
 })

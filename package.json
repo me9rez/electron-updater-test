@@ -1,11 +1,10 @@
 {
   "name": "electron-updater-test",
   "version": "0.0.8",
-  "description": "",
-  "type": "module",
+  "description": "electron app update test",
   "main": "./out/main/main.js",
   "scripts": {
-    "build": "rsbuild build",
+    "build": "pnpx poof out && rsbuild build",
     "dev": "parallel",
     "dev:renderer": "rsbuild dev",
     "dev:main": "electron ./out/main/main.js",
@@ -17,16 +16,16 @@
   "license": "MIT",
   "devDependencies": {
     "@electron-toolkit/preload": "^3.0.2",
-    "@rsbuild/core": "^1.5.0",
-    "@rsbuild/plugin-babel": "^1.0.6",
-    "@rsbuild/plugin-solid": "^1.0.6",
-    "@types/node": "^24.3.0",
-    "electron": "^37.3.1",
-    "electron-builder": "^26.0.12",
-    "electron-updater": "^6.6.2",
+    "@rsbuild/core": "^1.7.2",
+    "@rsbuild/plugin-babel": "^1.0.7",
+    "@rsbuild/plugin-solid": "^1.0.7",
+    "@types/node": "^25.0.9",
+    "electron": "^40.0.0",
+    "electron-builder": "^26.4.0",
+    "electron-updater": "^6.7.3",
     "parallel-wait-run": "^0.2.2",
-    "release-it": "^19.0.4",
-    "solid-js": "^1.9.9",
-    "typescript": "^5.9.2"
+    "release-it": "^19.2.3",
+    "solid-js": "^1.9.10",
+    "typescript": "^5.9.3"
   }
 }

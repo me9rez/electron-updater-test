@@ -1,4 +1,7 @@
 onlyBuiltDependencies:
+  - core-js
+  - core-js-pure
   - electron
   - electron-winstaller
+  - esbuild
   - parallel-wait-run
