@@ -16,16 +16,18 @@
   "license": "MIT",
   "devDependencies": {
     "@electron-toolkit/preload": "^3.0.2",
-    "@rsbuild/core": "^1.7.2",
-    "@rsbuild/plugin-babel": "^1.0.7",
-    "@rsbuild/plugin-solid": "^1.0.7",
-    "@types/node": "^25.0.9",
-    "electron": "^40.0.0",
-    "electron-builder": "^26.4.0",
-    "electron-updater": "^6.7.3",
+    "@rsbuild/core": "^2.0.3",
+    "@rsbuild/plugin-babel": "^1.1.2",
+    "@rsbuild/plugin-solid": "^1.2.0",
+    "@rsbuild/plugin-vue": "^1.2.7",
+    "@types/node": "^25.6.0",
+    "electron": "^42.0.0",
+    "electron-builder": "^26.8.1",
+    "electron-updater": "^6.8.3",
     "parallel-wait-run": "^0.2.2",
-    "release-it": "^19.2.3",
-    "solid-js": "^1.9.10",
-    "typescript": "^5.9.3"
+    "release-it": "^20.0.1",
+    "solid-js": "^1.9.12",
+    "typescript": "^6.0.3",
+    "vue": "^3.5.33"
   }
 }

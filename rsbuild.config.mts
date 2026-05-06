@@ -1,6 +1,5 @@
 import { defineConfig, type OutputConfig, type EnvironmentConfig } from '@rsbuild/core'
-import { pluginBabel } from '@rsbuild/plugin-babel';
-import { pluginSolid } from '@rsbuild/plugin-solid';
+import { pluginVue } from '@rsbuild/plugin-vue';
 
 const getElectronOutput = (type: "main" | "preload") => {
     const config: OutputConfig = {
@@ -50,14 +49,11 @@ export default defineConfig({
         "electron-preload": getElectronConfig('preload'),
         "web": {
             plugins: [
-                pluginBabel({
-                    include: /\.(?:jsx|tsx)$/,
-                }),
-                pluginSolid(),
+                pluginVue(),
             ],
             source: {
                 entry: {
-                    index: "./src/index.tsx",
+                    index: "./src/index.ts",
                 }
             },
             output: {
